@@ -15,6 +15,42 @@ img {
 }
 
 :root {
-    
+
 }
 /* #region Common */
+
+/* #region debug */
+.debug * {
+    border: 1px dashed;
+}
+
+.debug {
+
+    #top {
+
+    }
+
+    #bottom {
+
+    }
+}
+
+/* #endregion debug */
+
+/* #region utilities */
+
+/* #endregion utilities */
+
+
+/* #region top */
+
+/* #endregion top */
+
+/* #region bottom */
+
+/* #endregion bottom */
+
+
+/* #region media queries */
+
+/* #endregion media queries */
