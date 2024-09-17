@@ -25,22 +25,11 @@ img {
     --spoti-text-dark: #a3a3a3;
     --spoti-text-light: #d2d2d2;
 }
-/* #region Common */
+/* #endregion Common */
 
 /* #region debug */
 .debug * {
     border: 1px dashed;
-}
-
-.debug {
-
-    #top {
-
-    }
-
-    #bottom {
-
-    }
 }
 
 /* #endregion debug */
@@ -64,6 +53,7 @@ img {
 
 #content {
     flex-grow: 1;
+    overflow-y: auto;
     background-color: var(--spoti-content-bg);
 
 }
@@ -79,5 +69,23 @@ img {
 
 
 /* #region media queries */
+/* md */
+@media screen and (max-width: 1100px) {
+    
+}
 
+/* s */
+@media screen and (max-width: 700px) {
+    
+}
+
+/* xs */
+@media screen and (max-width: 600px) {
+    #top {
+
+        #sidebar {
+            width: 50px;
+        }
+    }
+}
 /* #endregion media queries */
