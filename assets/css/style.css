@@ -29,7 +29,9 @@ a {
     --spoti-sidebar-text-dark: #a3a3a3;
     --spoti-sidebar-text-light: #d2d2d2;
     --spoti-content-text-dark: #7d7f84;
+    --spoti-content-text-light: #fafafb;
     --spoti-content-selected-section: #adff2f;
+    --spoti-content-album-subtitle: #7b7d82;
 }
 /* #endregion Common */
 
@@ -111,9 +113,38 @@ a {
         a {
             color: var(--spoti-content-text-dark);
             font-size: 0.875rem;
+            font-weight: bold;
             padding-right: 1.5rem;
         }
 
+    }
+
+    main {
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--spoti-content-text-light);
+            padding-bottom: 2.2rem;                
+        }
+
+        h3 {
+            font-size: 1.125rem;
+            color: var(--spoti-content-text-light);
+            padding: 1.25rem 0 1rem;
+            text-align: center;
+        }
+
+        h4 {
+            font-size: 0.875rem;
+            color: var(--spoti-content-album-subtitle);
+            text-align: center;
+        }
+
+        section#recent {
+            padding-top: 2.5rem;
+            
+        }
     }
 }
 /* #endregion top */
