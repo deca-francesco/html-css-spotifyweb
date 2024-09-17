@@ -7,6 +7,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    overflow: hidden;
 }
 
 img {
@@ -15,7 +17,13 @@ img {
 }
 
 :root {
-
+    --spoti-content-bg: #141922;
+    --spoti-dark: #000000;
+    --spoti-light: #ffffff;
+    --spoti-upgrade-bg: #080b12;
+    --spoti-bottom-bg: #282828;
+    --spoti-text-dark: #a3a3a3;
+    --spoti-text-light: #d2d2d2;
 }
 /* #region Common */
 
@@ -38,16 +46,35 @@ img {
 /* #endregion debug */
 
 /* #region utilities */
-
+.d-flex {
+    display: flex;
+}
 /* #endregion utilities */
 
 
 /* #region top */
+#top {
+    height: calc(100% - 80px);
+}
 
+#sidebar {
+    width: 245px;
+    background-color: var(--spoti-dark);
+}
+
+#content {
+    flex-grow: 1;
+    background-color: var(--spoti-content-bg);
+
+}
 /* #endregion top */
 
 /* #region bottom */
+#bottom {
+    height: 80px;
+    background-color: var(--spoti-bottom-bg);
 
+}
 /* #endregion bottom */
 
 
