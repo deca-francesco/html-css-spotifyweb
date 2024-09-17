@@ -208,6 +208,13 @@ a {
 
         #sidebar {
             width: 50px;
+            flex-shrink: 0;
+        }
+
+        #content {
+            header {
+                padding: 0 30px;
+            }
         }
     }
 }
