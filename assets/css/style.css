@@ -16,14 +16,20 @@ img {
     display: block;
 }
 
+a {
+    text-decoration: none;
+}
+
 :root {
     --spoti-content-bg: #141922;
     --spoti-dark: #000000;
     --spoti-light: #ffffff;
     --spoti-upgrade-bg: #080b12;
     --spoti-bottom-bg: #282828;
-    --spoti-text-dark: #a3a3a3;
-    --spoti-text-light: #d2d2d2;
+    --spoti-sidebar-text-dark: #a3a3a3;
+    --spoti-sidebar-text-light: #d2d2d2;
+    --spoti-content-text-dark: #7d7f84;
+    --spoti-content-selected-section: #adff2f;
 }
 /* #endregion Common */
 
@@ -38,6 +44,10 @@ img {
 .d-flex {
     display: flex;
 }
+
+.list-unstyled {
+    list-style: none;
+}
 /* #endregion utilities */
 
 
@@ -47,7 +57,7 @@ img {
 }
 
 #sidebar {
-    width: 245px;
+    width: 230px;
     background-color: var(--spoti-dark);
 }
 
@@ -56,6 +66,55 @@ img {
     overflow-y: auto;
     background-color: var(--spoti-content-bg);
 
+    header {
+        height: 90px;
+        background-color: var(--spoti-upgrade-bg);
+        /* opacity: 0.5; */
+        justify-content: end;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        button.btn {
+            width: 218px;
+            height: 42px;
+            background-color: transparent;
+            color: var(--spoti-light);
+            border: 2px solid var(--spoti-light);
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            /* margin-right: 5px; */
+            margin-right: 1rem;
+        }
+    }
+
+    nav {
+        justify-content: center;
+        padding-top: 23px;
+
+        & ul li:first-child {
+            position: relative;
+        }
+
+        & ul li:first-child::before {
+            content: "";
+            width: 30px;
+            height: 3px;
+            background-color: var(--spoti-content-selected-section);
+            position: absolute;
+            bottom: -5px;
+            left: calc(50% - 30px);
+        }
+
+        a {
+            color: var(--spoti-content-text-dark);
+            font-size: 0.875rem;
+            padding-right: 1.5rem;
+        }
+
+    }
 }
 /* #endregion top */
 
