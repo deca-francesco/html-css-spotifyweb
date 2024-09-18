@@ -64,10 +64,16 @@ a {
 }
 
 #sidebar {
+    overflow-y: auto;
     width: 230px;
     flex-shrink: 0;
     background-color: var(--spoti-dark);
     padding-top: 1.25rem;
+
+    .sidebar_container {
+        flex-direction: column;
+        min-height: 100%;
+    }
 
     .logo {
         padding-bottom: 1.5rem;
@@ -83,6 +89,7 @@ a {
     } 
 
     .side_menu {
+        padding-bottom: 1.875rem;
 
         li {
             line-height: 2.2rem;
@@ -100,6 +107,7 @@ a {
                 span {
                     color: var(--spoti-content-text-dark);
                     padding-left: 0.5rem;
+                    font-size: 0.875rem;
                 }
             }
 
@@ -126,6 +134,82 @@ a {
                 position: absolute;
                 top: 0;
                 left: -23px;
+            }
+        }
+    }
+
+    .playlist {
+
+        h3 {
+            color: var(--spoti-sidebar-text-light);
+            font-size: 0.9rem;
+            padding-bottom: 1rem;
+        }
+
+        #new_playlist {
+            padding-bottom: 1.5rem;
+            a {
+                align-items: center;
+                gap: 0.625rem;
+
+                i {
+                    color: var(--spoti-sidebar-text-dark);
+                    font-size: 2.25rem;
+                }
+    
+                span {
+                    color: var(--spoti-sidebar-text-dark);
+                }
+            }
+        }
+
+        ul {
+            li {
+                padding-bottom: 1.5rem;
+                a {
+                    color: var(--spoti-sidebar-text-dark);
+                }
+            }
+        }
+    }
+
+    .install_app, .profile {
+        
+
+    }
+
+    .install_app {
+        padding-bottom: 0.8rem;
+        border-bottom: 2px solid var(--spoti-sidebar-text-dark);
+
+        a {
+
+            img {
+                width: 12px;
+            }
+            span {
+                font-size: 0.875;
+                padding-left: 0.8rem;
+                color: var(--spoti-sidebar-text-dark);
+            }
+        }
+    }
+
+    .profile {
+        padding-top: 0.8rem;
+
+        a {
+            img {
+                background-color: var(--spoti-sidebar-text-dark);
+                border-radius: 50%;
+                width: 1.5rem;
+                aspect-ratio: 1;
+            }
+
+            span {
+                color: var(--spoti-sidebar-text-dark);
+                padding-left: 0.625rem;
+                font-weight: 900;
             }
         }
     }
@@ -305,8 +389,6 @@ a {
             width: 50px;
 
             .sidebar_container {
-                display: flex;
-                flex-direction: column;
                 align-items: center;
             }
 
@@ -325,7 +407,7 @@ a {
             .side_menu {
                 li {
                     margin-bottom: 0.875rem;
-                    
+
                     span {
                         display: none;
                     }
@@ -338,6 +420,19 @@ a {
 
             .playlist {
                 display: none;
+            }
+
+            .install_app {
+                border-bottom: none;
+                span {
+                    display: none;
+                }
+            }
+
+            .profile {
+                span {
+                    display: none;
+                }
             }
         }
 
