@@ -387,6 +387,59 @@ a {
 #bottom {
     height: 90px;
     background-color: var(--spoti-bottom-bg);
+    padding: 0.75rem 0.625rem 1.625rem;
+}
+
+#bottom_left {
+    width: calc(100% / 3);
+    justify-content: start;
+    align-items: center;
+    /* padding-left: 0.625rem; */
+
+    .album_img {
+        width: 2.625rem;
+        padding-right: 0.781rem;
+    }
+
+    .artist {
+        flex-direction: column;
+        color: var(--spoti-light);
+        padding-right: 1.5rem;
+
+        h4 {
+            font-size: 0.813rem;
+        }
+
+        span {
+            font-size: 0.688rem;
+            color: var(--spoti-sidebar-text-dark);
+
+            &:hover {
+                color: var(--spoti-light);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .actions {
+        gap: 0.875rem;
+
+        svg {
+            width: 1rem;
+            fill: var(--spoti-sidebar-text-dark);
+
+            &:hover {
+                fill: var(--spoti-light);
+            }
+        }
+    }
+}
+
+#bottom_center {
+
+}
+
+#bottom_right {
 
 }
 /* #endregion bottom */
@@ -400,7 +453,16 @@ a {
 
 /* s */
 @media screen and (max-width: 700px) {
-    
+    #bottom {
+
+        #bottom_left {
+            .actions{
+                flex-direction: column;
+                justify-content: center;
+                gap: 0.3rem;
+            }
+        }
+    }
 }
 
 /* xs */
@@ -461,6 +523,18 @@ a {
         #content {
             header {
                 padding: 0 30px;
+            }
+        }
+    }
+
+    #bottom {
+
+        #bottom_left {
+
+            .artist {
+                span {
+                    max-width: 3rem;
+                }
             }
         }
     }
