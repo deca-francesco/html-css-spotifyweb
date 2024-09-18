@@ -306,10 +306,13 @@ a {
 
             .sidebar_container {
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
+                align-items: center;
             }
 
             .logo {
+                padding-bottom: 1rem;
+
                 #logo_regular {
                     display: none;
                 }
@@ -321,11 +324,11 @@ a {
 
             .side_menu {
                 li {
+                    margin-bottom: 0.875rem;
+                    
                     span {
                         display: none;
                     }
-                    
-
                 }
 
                 & li#home::before {
