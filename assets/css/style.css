@@ -50,6 +50,11 @@ a {
 .list-unstyled {
     list-style: none;
 }
+
+.sidebar_container {
+    width: 80%;
+    margin: auto;
+}
 /* #endregion utilities */
 
 
@@ -62,6 +67,17 @@ a {
     width: 230px;
     flex-shrink: 0;
     background-color: var(--spoti-dark);
+    padding-top: 1.25rem;
+
+    .logo #logo_regular {
+        width: 70%;
+    }
+
+    .logo #logo_small {
+        display: none;
+        width: 30px;
+    }
+
 }
 
 #content {
@@ -236,6 +252,23 @@ a {
 
         #sidebar {
             width: 50px;
+
+            .sidebar_container {
+                display: flex;
+                justify-content: center;
+            }
+
+            .logo #logo_regular {
+                display: none;
+            }
+
+            .logo #logo_small {
+                display: block;
+            }
+
+            .playlist {
+                display: none;
+            }
         }
 
         #content {
