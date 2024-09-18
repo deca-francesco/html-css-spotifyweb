@@ -99,9 +99,9 @@ a {
                 align-items: center;
 
 
-                img {
+                svg {
                     width: 20px;
-                    filter: var(--spoti-sidebar-text-dark);
+                    fill: var(--spoti-sidebar-text-dark);
                 }
 
                 span {
@@ -112,13 +112,13 @@ a {
             }
 
             &:hover {
-                img {
+                svg {
                     
-                    filter: var(--spoti-sidebar-text-light);
+                    fill: var(--spoti-light);
                 }
 
                 span {
-                    color: var(--spoti-sidebar-text-light);
+                    color: var(--spoti-light);
                 }
             }
         }
@@ -152,15 +152,24 @@ a {
                 align-items: center;
                 gap: 0.625rem;
 
-                i {
-                    color: var(--spoti-sidebar-text-dark);
-                    font-size: 2.25rem;
+                svg {
+                    fill: var(--spoti-sidebar-text-dark);
+                    width: 2.25rem;
+
+                    &:hover {
+                        fill: var(--spoti-light);
+                    }
                 }
     
                 span {
                     color: var(--spoti-sidebar-text-dark);
+
+                    &:hover {
+                        color: var(--spoti-light);
+                    }
                 }
             }
+
         }
 
         ul {
@@ -168,38 +177,51 @@ a {
                 padding-bottom: 1.5rem;
                 a {
                     color: var(--spoti-sidebar-text-dark);
+
+                    &:hover {
+                        color:var(--spoti-light)
+                    }
                 }
             }
         }
     }
 
-    .install_app, .profile {
-        
-
-    }
-
     .install_app {
+        margin-top: auto;
         padding-bottom: 0.8rem;
         border-bottom: 2px solid var(--spoti-sidebar-text-dark);
 
         a {
 
-            img {
-                width: 12px;
+            &:hover {
+                svg {
+                    fill: var(--spoti-light);
+                }
+                span {
+                    color: var(--spoti-light);
+                }
             }
+
+            svg {
+                width: 12px;
+                fill: var(--spoti-sidebar-text-dark);
+            }
+
             span {
                 font-size: 0.875;
                 padding-left: 0.8rem;
                 color: var(--spoti-sidebar-text-dark);
             }
         }
+
     }
 
     .profile {
         padding-top: 0.8rem;
+        padding-bottom: 0.5rem;
 
         a {
-            img {
+            svg {
                 background-color: var(--spoti-sidebar-text-dark);
                 border-radius: 50%;
                 width: 1.5rem;
