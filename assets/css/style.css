@@ -60,6 +60,7 @@ a {
 
 #sidebar {
     width: 230px;
+    flex-shrink: 0;
     background-color: var(--spoti-dark);
 }
 
