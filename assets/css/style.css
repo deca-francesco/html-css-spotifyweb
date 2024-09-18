@@ -116,7 +116,17 @@ a {
         }
 
         li#home {
+            position: relative;
 
+            &::before {
+                content: "";
+                height: 2.2rem;
+                width: 3px;
+                background-color: var(--spoti-content-selected-section);
+                position: absolute;
+                top: 0;
+                left: -23px;
+            }
         }
     }
 }
@@ -316,6 +326,10 @@ a {
                     }
                     
 
+                }
+
+                & li#home::before {
+                    content: none;
                 }
             }
 
