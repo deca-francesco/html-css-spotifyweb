@@ -72,7 +72,7 @@ a {
     header {
         height: 90px;
         background-color: var(--spoti-upgrade-bg);
-        /* opacity: 0.5; */
+        opacity: 0.9;
         justify-content: end;
         align-items: center;
         position: sticky;
