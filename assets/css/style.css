@@ -1,4 +1,20 @@
 /* #region Common */
+:root {
+    --spoti-content-bg: #141922;
+    --spoti-dark: #000000;
+    --spoti-light: #ffffff;
+    --spoti-upgrade-bg: #080b12;
+    --spoti-bottom-bg: #282828;
+    --spoti-sidebar-text-dark: #a3a3a3;
+    --spoti-sidebar-text-light: #d2d2d2;
+    --spoti-content-text-dark: #7d7f84;
+    --spoti-content-text-light: #fafafb;
+    --spoti-content-selected-section: #adff2f;
+    --spoti-content-album-subtitle: #7b7d82;
+    --spoti-playbar-dark: #5a5a5a;
+    --spoti-playbar-light: #c1c1c1; 
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,21 +36,7 @@ a {
     text-decoration: none;
 }
 
-:root {
-    --spoti-content-bg: #141922;
-    --spoti-dark: #000000;
-    --spoti-light: #ffffff;
-    --spoti-upgrade-bg: #080b12;
-    --spoti-bottom-bg: #282828;
-    --spoti-sidebar-text-dark: #a3a3a3;
-    --spoti-sidebar-text-light: #d2d2d2;
-    --spoti-content-text-dark: #7d7f84;
-    --spoti-content-text-light: #fafafb;
-    --spoti-content-selected-section: #adff2f;
-    --spoti-content-album-subtitle: #7b7d82;
-    --spoti-playbar-dark: #5a5a5a;
-    --spoti-playbar-light: #c1c1c1; 
-}
+
 /* #endregion Common */
 
 /* #region debug */
@@ -194,6 +196,8 @@ a {
         border-bottom: 2px solid var(--spoti-sidebar-text-dark);
 
         a {
+            align-items: center;
+
 
             &:hover {
                 svg {
@@ -205,7 +209,8 @@ a {
             }
 
             svg {
-                width: 12px;
+                width: 2rem;
+                margin-left: -5px;
                 fill: var(--spoti-sidebar-text-dark);
             }
 
@@ -264,7 +269,6 @@ a {
             border: 2px solid var(--spoti-light);
             border-radius: 2rem;
             font-size: 0.875rem;
-            /* margin-right: 5px; */
             margin-right: 1rem;
         }
 
@@ -624,6 +628,7 @@ a {
 
             .install_app {
                 border-bottom: none;
+                
                 span {
                     display: none;
                 }
